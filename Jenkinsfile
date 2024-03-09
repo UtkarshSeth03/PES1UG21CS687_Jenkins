@@ -17,6 +17,7 @@ pipeline {
         
         stage('Test') {
             steps {
+                sh 'not_command'
                 sh './output'
                  script {
                     def output = sh(script: './output', returnStdout: true).trim()
